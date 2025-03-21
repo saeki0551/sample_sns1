@@ -66,3 +66,7 @@ end
 gem 'devise' # gemfileの一番下に記述
 
 gem 'sass-rails'
+
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
