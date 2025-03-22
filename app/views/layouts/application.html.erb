@@ -21,8 +21,33 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
+  <header>
+  <ul>
+      <li>
+        <h2>navigation</h2>
+      </li>
+      <% if !current_page?(root_path) %> <!-- トップページだけ非表示にする、それ以外のページは表示-->
+        <li>
+          <%= link_to("ユーザー選択", root_path) %>
+        </li>
+      <% end %>
+      <li>
+        <%= link_to("ユーザー一覧", "users/index") %>
+      </li>
+      <li>
+        <%= link_to("投稿一覧", posts_path) %>
+      </li>
+      <li>
+        <%= link_to("新規投稿", "posts/new") %>
+      </li>
+    </ul>
+  </header>
 
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+
+  </footer>
 </html>

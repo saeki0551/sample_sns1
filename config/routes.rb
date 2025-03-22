@@ -14,7 +14,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "users#top"
 
+  resources :posts
+
   get "posts/users/top", to: "users#top"
   get "posts/index", to: "posts#index"
+  post "posts/new", to: "posts#new"
+  post "posts/create", to: "posts#create"
+
 
 end

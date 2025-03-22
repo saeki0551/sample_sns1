@@ -70,3 +70,5 @@ gem 'sass-rails'
 gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
+
+gem 'pry-rails'
